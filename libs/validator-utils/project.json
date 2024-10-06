@@ -1,0 +1,19 @@
+{
+  "name": "validator-utils",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/validator-utils/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/validator-utils",
+        "main": "libs/validator-utils/src/index.ts",
+        "tsConfig": "libs/validator-utils/tsconfig.lib.json",
+        "assets": ["libs/validator-utils/*.md"]
+      }
+    }
+  }
+}
