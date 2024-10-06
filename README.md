@@ -1,4 +1,4 @@
-# CommerceHub
+<h1 align="center">Commerce-Hub</h1>
 
 ## Overview
 **CommerceHub** is a scalable and centralized service designed to streamline store creation, product catalog management, and order processing for e-commerce platforms. Built using the **Nx workspace** with **Next.js**, this service offers seamless integration, high performance, and the ability to handle complex e-commerce workflows with ease.
