@@ -1,0 +1,26 @@
+{
+  "name": "merchant-service",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/merchant-service/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "dependsOn": ["build"],
+      "options": {
+        "buildTarget": "merchant-service:build",
+        "runBuildTargetDependencies": false
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "merchant-service:build:development"
+        },
+        "production": {
+          "buildTarget": "merchant-service:build:production"
+        }
+      }
+    }
+  }
+}
