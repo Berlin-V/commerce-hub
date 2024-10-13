@@ -14,7 +14,12 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@commerce-hub/id": ["libs/id/src/index.ts"],
+      "@commerce-hub/lib": ["lib/src/index.ts"],
+      "@commerce-hub/type-utils": ["libs/type-utils/src/index.ts"],
+      "@commerce-hub/validator-utils": ["libs/validator-utils/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
