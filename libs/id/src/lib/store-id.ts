@@ -1,6 +1,6 @@
 import { InDataModel, jetIdGenerate, validateJetId } from './id';
 
-export class MerchantID extends InDataModel<string> {
+export class StoreID extends InDataModel<string> {
   readonly DATA_CLASSIFICATION = 'ID';
   readonly DATA_NAME = 'MERCHANT_ID';
 
@@ -9,16 +9,16 @@ export class MerchantID extends InDataModel<string> {
   }
 
   validate() {
-    const merchantId = this.value;
-    if (!merchantId) throw new Error('Merchant-ID is not present');
-    const [jetID] = merchantId.split('_').slice(1);
-    if (merchantId.startsWith('m_') || validateJetId(jetID, 'HEX')) {
-      throw new Error('Invalid Merchant-ID');
+    const storeId = this.value;
+    if (!storeId) throw new Error('Store-ID is not present');
+    const [jetID] = storeId.split('_').slice(1);
+    if (storeId.startsWith('s_') || validateJetId(jetID, 'HEX')) {
+      throw new Error('Invalid Store-ID');
     }
   }
 
   static generate() {
-    return `m_${jetIdGenerate('HEX')}`;
+    return `s_${jetIdGenerate('HEX')}`;
   }
 
   hash() {
@@ -32,7 +32,7 @@ export class MerchantID extends InDataModel<string> {
     return [];
   }
 }
-export function CMerchantIDValidator() {
+export function CStoreIDValidator() {
   return (control: {
     value: any;
   }): {
@@ -40,7 +40,7 @@ export function CMerchantIDValidator() {
   } => {
     const value = control.value;
     try {
-      new MerchantID(value);
+      new StoreID(value);
       return { status: 'SUCCESS' };
     } catch (e: any) {
       return {
