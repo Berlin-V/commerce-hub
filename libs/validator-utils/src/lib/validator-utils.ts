@@ -8,7 +8,7 @@ import {
 } from '@commerce-hub/type-utils';
 
 export function zeroDepthValidator<V extends TDataValidator = TDataValidator>(
-  data: unknown,
+  data: any,
   schema: V
 ): TValidatorResponse<GetDataType<V>> {
   const mandatories = Object.keys(schema).filter(

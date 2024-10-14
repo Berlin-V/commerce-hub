@@ -26,7 +26,7 @@ export abstract class InDataModel<T> {
     this.validate();
     this.validateAsync();
   }
-  abstract validate();
+  abstract validate(): any;
   abstract validateAsync(): Promise<any[]>;
 
   get value(): T {
@@ -40,7 +40,7 @@ export abstract class InDataModel<T> {
   }
 
   equals<T>(value: T): boolean {
-    return this._value === value;
+    return this._value === (value as unknown);
   }
   abstract toString(): string;
   abstract hash(): string;
