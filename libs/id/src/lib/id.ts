@@ -14,7 +14,7 @@ export function validateJetId(id: string, type: GENERATE_ID_TYPE) {
   return validateId(id, type);
 }
 
-export abstract class InDataModel<T> {
+export abstract class InDataValidation<T> {
   protected _value;
   protected _variable;
   abstract readonly DATA_CLASSIFICATION: DATA_CLASSIFICATION_TYPES;
