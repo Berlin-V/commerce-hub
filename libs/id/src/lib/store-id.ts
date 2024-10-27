@@ -1,6 +1,6 @@
-import { InDataModel, jetIdGenerate, validateJetId } from './id';
+import { InDataValidation, jetIdGenerate, validateJetId } from './id';
 
-export class StoreID extends InDataModel<string> {
+export class StoreID extends InDataValidation<string> {
   readonly DATA_CLASSIFICATION = 'ID';
   readonly DATA_NAME = 'MERCHANT_ID';
 
