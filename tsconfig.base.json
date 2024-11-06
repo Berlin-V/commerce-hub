@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@commerce-hub/data-model": ["libs/data-model/src/index.ts"],
       "@commerce-hub/id": ["libs/id/src/index.ts"],
       "@commerce-hub/lib": ["lib/src/index.ts"],
       "@commerce-hub/type-utils": ["libs/type-utils/src/index.ts"],
